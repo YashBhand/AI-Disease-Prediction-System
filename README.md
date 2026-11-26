@@ -1,6 +1,5 @@
 
-
-\# AI Disease Prediction System
+# AI Disease Prediction System
 
 
 
@@ -8,7 +7,7 @@ An AI-powered web application that predicts possible diseases based on symptoms 
 
 
 
-\## Live Demo
+## Live Demo
 
 
 
@@ -16,57 +15,57 @@ https://ai-disease-prediction-system-c366.onrender.com
 
 
 
-\## Features
+## Features
 
 
 
-\- User registration and login
+- User registration and login
 
-\- Password hashing
+- Password hashing
 
-\- Symptom selection
+- Symptom selection
 
-\- Machine Learning-based disease prediction
+- Machine Learning-based disease prediction
 
-\- Prediction history
+- Prediction history
 
-\- User dashboard
+- User dashboard
 
-\- SQLite database integration
+- SQLite database integration
 
-\- Responsive user interface
-
-
-
-\## Technologies Used
+- Responsive user interface
 
 
 
-\- Python
-
-\- Flask
-
-\- Scikit-learn
-
-\- Pandas
-
-\- NumPy
-
-\- SQLite
-
-\- HTML
-
-\- CSS
-
-\- Bootstrap
-
-\- Git and GitHub
-
-\- Render
+## Technologies Used
 
 
 
-\## Project Structure
+- Python
+
+- Flask
+
+- Scikit-learn
+
+- Pandas
+
+- NumPy
+
+- SQLite
+
+- HTML
+
+- CSS
+
+- Bootstrap
+
+- Git and GitHub
+
+- Render
+
+
+
+## Project Structure
 
 
 
@@ -138,11 +137,11 @@ AI-Disease-Prediction-System/
 
 
 
-\## Installation and Setup
+## Installation and Setup
 
 
 
-\### 1. Clone the repository
+### 1. Clone the repository
 
 
 
@@ -154,7 +153,7 @@ git clone https://github.com/YashBhand/AI-Disease-Prediction-System.git
 
 
 
-\### 2. Open the project folder
+### 2. Open the project folder
 
 
 
@@ -166,7 +165,7 @@ cd AI-Disease-Prediction-System
 
 
 
-\### 3. Create a virtual environment
+### 3. Create a virtual environment
 
 
 
@@ -178,7 +177,7 @@ python -m venv venv
 
 
 
-\### 4. Activate the virtual environment
+ 4. Activate the virtual environment
 
 
 
@@ -194,11 +193,11 @@ venv\\Scripts\\activate
 
 
 
-\### 5. Install dependencies
+### 5. Install dependencies
 
 
 
-```bash
+bash
 
 pip install -r requirements.txt
 
@@ -218,7 +217,7 @@ python app.py
 
 
 
-\### 7. Open in your browser
+### 7. Open in your browser
 
 
 
@@ -226,7 +225,7 @@ http://127.0.0.1:5000
 
 
 
-\## Deployment
+## Deployment
 
 
 
@@ -242,21 +241,21 @@ https://ai-disease-prediction-system-c366.onrender.com
 
 
 
-\## Security
+## Security
 
 
 
-\- The virtual environment is excluded from GitHub.
+- The virtual environment is excluded from GitHub.
 
-\- The SQLite database is excluded from GitHub.
+- The SQLite database is excluded from GitHub.
 
-\- Set a strong SECRET\_KEY environment variable for deployment.
+- Set a strong SECRET\_KEY environment variable for deployment.
 
-\- Never upload passwords or private credentials.
+- Never upload passwords or private credentials.
 
 
 
-\## Disclaimer
+## Disclaimer
 
 
 
