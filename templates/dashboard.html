@@ -1,0 +1,125 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-4 mb-5">
+
+    <!-- Dashboard Heading -->
+    <div class="text-center mb-4">
+        <h2 class="fw-bold text-primary">User Dashboard</h2>
+        <p class="text-muted">
+            Welcome to your AI Disease Prediction System
+        </p>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="row g-4 mb-4">
+
+        <!-- Total Predictions -->
+        <div class="col-md-6">
+            <div class="card shadow text-center p-4 h-100">
+                <h5 class="text-muted">Total Predictions</h5>
+                <h1 class="text-primary fw-bold">
+                    {{ total_predictions }}
+                </h1>
+                <p class="mb-0">Predictions made by you</p>
+            </div>
+        </div>
+
+        <!-- Different Diseases -->
+        <div class="col-md-6">
+            <div class="card shadow text-center p-4 h-100">
+                <h5 class="text-muted">Different Diseases</h5>
+                <h1 class="text-success fw-bold">
+                    {{ different_diseases }}
+                </h1>
+                <p class="mb-0">Unique predicted diseases</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="card shadow p-4 mb-4">
+
+        <h4 class="mb-3">Quick Actions</h4>
+
+        <div class="d-flex flex-wrap gap-3">
+
+            <a href="{{ url_for('predict') }}"
+               class="btn btn-primary">
+                Make New Prediction
+            </a>
+
+            <a href="{{ url_for('history') }}"
+               class="btn btn-success">
+                View Prediction History
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Recent Predictions -->
+    <div class="card shadow p-4">
+
+        <h4 class="mb-3">Recent Predictions</h4>
+
+        {% if recent_history %}
+
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-striped">
+
+                <thead class="table-dark">
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Selected Symptoms</th>
+                        <th>Predicted Disease</th>
+                        <th>Prediction Date</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for record in recent_history %}
+
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ record[0] }}</td>
+                        <td>
+                            <strong>
+                                {{ record[1]|replace('_', ' ')|title }}
+                            </strong>
+                        </td>
+                        <td>{{ record[2] }}</td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        {% else %}
+
+        <div class="alert alert-info text-center">
+            You have not made any predictions yet.
+        </div>
+
+        {% endif %}
+
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="alert alert-warning text-center mt-4">
+        This system is developed for educational purposes only.
+        Predictions are not a substitute for professional medical advice.
+    </div>
+
+</div>
+
+{% endblock %}

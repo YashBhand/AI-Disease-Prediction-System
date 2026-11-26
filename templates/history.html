@@ -1,0 +1,80 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5 mb-5">
+
+    <div class="card shadow p-4">
+
+        <h2 class="text-center mb-3">
+            Prediction History
+        </h2>
+
+        <p class="text-center text-muted">
+            View your previous disease predictions.
+        </p>
+
+        <hr>
+
+        {% if history %}
+
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-striped">
+
+                <thead class="table-dark">
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Selected Symptoms</th>
+                        <th>Predicted Disease</th>
+                        <th>Prediction Date</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for record in history %}
+
+                    <tr>
+                        <td>{{ loop.index }}</td>
+
+                        <td>{{ record[1] }}</td>
+
+                        <td>
+                            <strong>{{ record[2]|replace('_', ' ')|title }}</strong>
+                        </td>
+
+                        <td>{{ record[3] }}</td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        {% else %}
+
+        <div class="alert alert-info text-center">
+            You have not made any predictions yet.
+        </div>
+
+        {% endif %}
+
+        <div class="text-center mt-3">
+
+            <a href="{{ url_for('predict') }}"
+               class="btn btn-primary">
+                Make New Prediction
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

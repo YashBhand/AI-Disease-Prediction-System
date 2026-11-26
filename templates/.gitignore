@@ -1,0 +1,19 @@
+# Python virtual environment
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables and secrets
+.env
+
+# SQLite database (do not upload user data)
+database/*.db
+
+# IDE files
+.vscode/
+
+# Temporary files
+*.log

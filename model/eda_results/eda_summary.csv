@@ -1,0 +1,9 @@
+Metric,Value
+Total Records,304
+Total Symptoms,132
+Total Diseases,41
+Missing Values,0
+Duplicate Rows,0
+Duplicate Symptom Patterns,0
+Minimum Samples per Disease,5
+Maximum Samples per Disease,10

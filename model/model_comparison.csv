@@ -1,0 +1,4 @@
+Algorithm,Accuracy,Precision,Recall,F1 Score
+Decision Tree,0.6721311475409836,0.5642276422764227,0.573170731707317,0.5393939393939393
+Random Forest,1.0,1.0,1.0,1.0
+Naive Bayes,1.0,1.0,1.0,1.0
